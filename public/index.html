@@ -50,7 +50,8 @@ From jQuery-swip - http://code.google.com/p/jquery-swip/source/browse/trunk/jque
 var loginUrl    = 'https://login.salesforce.com/';
 var clientId    = '3MVG9A2kN3Bn17htFsz.Zr8IKNGegV6eItT2HO1lByFM9rfCuz0SLK.RkYx5UgkI_ps2guXZ7.c7IsE7Aiw6w'; //demo only
 var redirectUri = 'https://forcetknodedemo.herokuapp.com/index.html';
-var proxyUrl    = '/proxy/';
+var location = document.location.origin;
+var proxyUrl = location + '/proxy/';
 
 // We'll get an instance of the REST API client in a callback after we do 
 // OAuth
