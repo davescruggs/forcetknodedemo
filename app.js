@@ -48,14 +48,14 @@ app.all('/proxy/?*', function (req, res) {
         url: sfEndpoint || "https://login.salesforce.com//services/oauth2/token",
         method: req.method,
         headers: {"Content-Type": contentType,
-            "Authorization": req.headers["X-Authorization"],
+            "Authorization": req.headers["x-authorization"],
             "X-User-Agent": req.headers["x-user-agent"]},
         body: body
     }).pipe(res);
 });
 
 function log(req) {
-    console.log("req.headers[\"authorization\"] = " + req.headers["authorization"]);
+    console.log("req.headers[\"authorization\"] = " + req.headers["x-authorization"]);
     console.log("req.headers[\"salesforceproxy-endpoint\"] = " + req.headers["salesforceproxy-endpoint"]);
     console.log('req.method = ' + req.method);
     console.log('req.body ' + JSON.stringify(req.body));
