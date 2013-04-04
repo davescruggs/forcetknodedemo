@@ -2,6 +2,8 @@
  * Module dependencies.
  */
 
+var client_id = process.env.client_id;
+
 var express = require('express')
     , http = require('http')
     , path = require('path')
