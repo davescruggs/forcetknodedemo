@@ -30,7 +30,7 @@ app.configure('development', function () {
 });
 
 app.get('/', function(req, res) {
-  res.render('index', { client_id: client_id });
+  res.render('public/index', { client_id: client_id });
 });
 
 app.all('/proxy/?*', function (req, res) {
