@@ -299,7 +299,7 @@ if (forcetk.Client === undefined) {
 					xhr.setRequestHeader(paramName, paramMap[paramName]);
 				}
                 xhr.setRequestHeader(that.authzHeader, "OAuth " + that.sessionId);
-                xhr.setRequestHeader('X-User-Agent', 'salesforce-toolkit-rest-javascript/' + that.apiVersion);
+                xhr.setRequestHeader('X-User-Agent', 'salesforce-toolkit-rest-javascript-jqm-node/' + that.apiVersion);
             }
         });
     }
